@@ -21,4 +21,5 @@ urlpatterns = [
     path('campaña/', include('apps.campaña.urls')),
     path('departamento/', include('apps.departamento.urls')),
     path('distrito/', include('apps.distrito.urls')),
+    path('sede/', include('apps.sede.urls')),
 ]

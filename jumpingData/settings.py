@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'apps.campaña',
     'apps.departamento',
     'apps.distrito',
+    'apps.sede',
 ]
 
 MIDDLEWARE = [
