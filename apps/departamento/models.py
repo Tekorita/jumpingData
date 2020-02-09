@@ -8,5 +8,5 @@ class Departamento(models.Model):
 	def __str__(self): #esta funcion nos trae el valor del objeto en vez del nombre del objeto cuando es llave foranea o forekeing
 		return self.nombre
 
-#	def get_absolute_url(self):
-#	    return reverse('index')
+	def get_absolute_url(self):
+	    return reverse('index')
