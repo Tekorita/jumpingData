@@ -95,10 +95,10 @@ WSGI_APPLICATION = 'jumpingData.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd6sakgh12b98p2',
-        'USER': 'cnsdlbispgtbeg',
-        'PASSWORD': 'c6a9eca6981463dbdd11658089c1e69209c190c6d1d820fa8fd617d3afbf0dfd',
-        'HOST': 'ec2-35-168-54-239.compute-1.amazonaws.com',
+        'NAME': 'deofv98bvogckm',
+        'USER': 'uiuczpmdoqjhhf',
+        'PASSWORD': '63ecb45f7f8a9483e67523faca34a8365379bd5d0846d9c70a7a170d97714cca',
+        'HOST': 'ec2-54-80-184-43.compute-1.amazonaws.com',
         'PORT': 5432,
     }
 }
