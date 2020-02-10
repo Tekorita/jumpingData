@@ -81,13 +81,24 @@ WSGI_APPLICATION = 'jumpingData.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'jumpingdata',
+#         'USER': 'postgres',
+#         'PASSWORD': '123',
+#         'HOST': 'localhost',
+#         'PORT': 5432,
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'jumpingdata',
-        'USER': 'postgres',
-        'PASSWORD': '123',
-        'HOST': 'localhost',
+        'NAME': 'd6sakgh12b98p2',
+        'USER': 'cnsdlbispgtbeg',
+        'PASSWORD': 'c6a9eca6981463dbdd11658089c1e69209c190c6d1d820fa8fd617d3afbf0dfd',
+        'HOST': 'ec2-35-168-54-239.compute-1.amazonaws.com',
         'PORT': 5432,
     }
 }
