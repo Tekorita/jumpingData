@@ -1,1 +1,1 @@
-web: gunicorn jumpingdata.wsgi
+web: gunicorn jumpingData.wsgi
