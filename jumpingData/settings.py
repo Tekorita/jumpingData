@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'apps.departamento',
     'apps.distrito',
     'apps.sede',
+    'apps.afiliador',
 ]
 
 MIDDLEWARE = [

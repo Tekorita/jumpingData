@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<td><strong>Id Afiliador</strong></td>
+			<td><strong>Nombre</strong></td>
+			<td><strong>Telefono</strong></td>
+			<td><strong>Sede</strong></td>
+		</tr>	
+	</thead>
+	<tbody>
+		{% if object_list %}
+		{% for afiliador in object_list %}
+		<tr>
+			<td>{{ afiliador.id_afiliador }}</td>
+			<td>{{ afiliador.nombre }}</td>
+			<td>{{ afiliador.telefono }}</td>
+			<td>{{ afiliador.sede.nombre }}</td>
+			<td>
+				<a class = "btn btn-primary" href="{% url 'afiliador_editar' afiliador.id_afiliador %}">Editar</a>
+				<a class = "btn btn-danger" href="{% url 'afiliador_eliminar' afiliador.id_afiliador %}">Eliminar</a>
+			</td>		
+		</tr>
+		{% endfor %}
+		{% else %}
+			<h1>No hay registro de afiliados</h1>
+		{% endif %}
+	</tbody>	
+</table>
+<ul class="pager">
+	<li>
+		{% if page_obj.has_previous %}
+		<a href="?page={{ page_obj.previous_page_number }}">Anterior</a>
+		{% endif %}
+	</li>
+	<li>
+		{% if page_obj.has_next %}
+		<a href="?page={{ page_obj.next_page_number }}">Siguiente</a>
+		{% endif %}
+	</li>
+</ul>
+{% endblock %}

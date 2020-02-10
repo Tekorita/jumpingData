@@ -2,8 +2,8 @@
 {% block content %}
 <form method="post">
 	{% csrf_token %}
-	<h3>Deseas eliminar el registro del distrito {{ object.nombre }}?</h3>
+	<h3>Deseas eliminar el registro del afiliador {{ object.nombre }}?</h3>
 	<button class="btn btn-danger" type="submit">Si, eliminar</button>
-	<a class="btn btn-default" href="{% url 'distrito_listar' %}">Cancelar</a>
+	<a class="btn btn-default" href="{% url 'afiliador_listar' %}">Cancelar</a>
 </form>
 {% endblock %}

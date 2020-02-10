@@ -4,6 +4,6 @@
 	{% csrf_token %}
 	<h3>Deseas eliminar el registro de la sede {{ object.nombre }}?</h3>
 	<button class="btn btn-danger" type="submit">Si, eliminar</button>
-	<a class="btn btn-default" href="{% url 'campaña_listar' %}">Cancelar</a>
+	<a class="btn btn-default" href="{% url 'sede_listar' %}">Cancelar</a>
 </form>
 {% endblock %}

@@ -46,10 +46,17 @@
 									    </div>
 									</li>
 									<li class="nav-item dropdown show">
+									    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Sedes</a>
+									    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+											<a class="dropdown-item" href="{% url 'sede_crear' %}">Registrar</a>
+											<a class="dropdown-item" href="{% url 'sede_listar' %}">Listar</a>
+									    </div>
+									</li>
+									<li class="nav-item dropdown show">
 									    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Afiliados</a>
 									    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-									      	<a class="dropdown-item" href="#">Solicitar</a>
-									      	<a class="dropdown-item" href="#">Listar solicitudes</a>
+											<a class="dropdown-item" href="{% url 'afiliador_crear' %}">Registrar</a>
+											<a class="dropdown-item" href="{% url 'afiliador_listar' %}">Listar</a>
 									    </div>
 									</li>
 									<li class="nav-item dropdown show">
