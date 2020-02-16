@@ -25,7 +25,7 @@ SECRET_KEY = 'iiq+^+fr=!^0hgd)gpt-ifsw5(!)7nyamrj$dgwwjjf7j-f2j7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['jumpingdata.herokuapp.com']
 # ALLOWED_HOSTS = ['jumpingdata.herokuapp.com']
 
 
@@ -149,4 +149,5 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
