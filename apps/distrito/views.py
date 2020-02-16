@@ -17,7 +17,7 @@ from apps.distrito.models import Distrito
 #-----------------------------------VISTAS BASADAS EN FUNCIONES-------------------------------------------
 
 def index(request):
-	return render(request, 'distrito/index.html')
+	return render(request, 'index.html')
 
 def distrito_view(request):
 	# import pdb; pdb.set_trace()

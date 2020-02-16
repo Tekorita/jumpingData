@@ -17,7 +17,7 @@ from apps.campaña.models import Campaña
 #-----------------------------------VISTAS BASADAS EN FUNCIONES-------------------------------------------
 
 def index(request):
-	return render(request, 'campaña/index.html')
+	return render(request, 'index.html')
 
 def campaña_view(request):
 	# import pdb; pdb.set_trace()

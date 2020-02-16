@@ -1,50 +1,96 @@
 {% load staticfiles %}
-{% block navbar %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
 
-<div class="menu">
-    <nav>
-        <div class="nav-wrapper z-depth-5 blue-grey darken-4 hoverable">
-            <div class="container-redes">
-                <ul class="left">      
-                    <li class="link"><a href="https://www.facebook.com/davidjesus.palma" target="_blank"><i class="icon ion-logo-facebook"></i></a></li>
-                    <li class="link"><a href="https://twitter.com/davidpalmalugo" target="_blank"><i class="icon ion-logo-twitter"></i></a></li>
-                    <li class="link"><a href="https://www.instagram.com/david_palma07/" target="_blank"><i class="icon ion-logo-instagram"></i></a></li>
-                    <li class="link"><a href="https://github.com/Tekorita" target="_blank"><i class="icon ion-logo-github"></i></a></li>
-                    <li class="link"><a href="https://www.linkedin.com/in/david-palma-lugo-b53388105/" target="_blank"><i class="icon ion-logo-linkedin"></i></a></li>
-                </ul>
-            </div>
-            <ul class="right hide-on-med-and-down">
-                <li class="border-nav-1 link waves-effect waves-purple waves-effect waves-block waves-light"><a href="#">Home</a></li>                
-                <li class="border-nav-2 link waves-effect waves-orange waves-effect waves-block waves-light"><a href="#">Sobre mi</a></li>                
-                <li class="border-nav-3 link waves-effect waves-yellow waves-effect waves-block waves-light"><a href="#">Skills</a></li>            
-                <li class="border-nav-4 link waves-effect waves-red waves-effect waves-block waves-light"><a href="#">Proyectos</a></li>                
-                <li class="border-nav-5 link waves-effect waves-blue waves-effect waves-block waves-light"><a href="#">Experiencia</a></li>                
-                <li class="border-nav-6 link waves-effect waves-teal waves-effect waves-block waves-light"><a href="#">Contacto</a></li>                    
-            </ul>
-            <a href="#" data-target="slide-out" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
-            <ul id="slide-out" class="sidenav">
-                    <li>
-                        <div class="user-view">
-                          <div class="background">
-                            <img src="{% static 'imagenes/paralax4.jpg' %}">
-                          </div>
-                          <a href="#"><img class="circle" src="{% static 'imagenes/yo3.jpg' %}"></a>
-                          <a href="#"><span class="white-text name">David Palma Lugo</span></a>
-                          <a href="#"><span class="white-text email">davidpalmalugo@gmail.com</span></a>
-                        </div>
-                    </li>
-                    <li class="link-movil1 waves-effect waves-teal waves-effect waves-block waves-light"><a href="#"><i class="material-icons">home</i>Home</a></li>
-                    <li class="link-movil2 waves-effect waves-teal waves-effect waves-block waves-light"><a href="#"><i class="material-icons">face</i>Sobre mi</a></li>
-                    <li class="link-movil3 waves-effect waves-teal waves-effect waves-block waves-light"><a href="#"><i class="material-icons">code</i>Skills</a></li>
-                    <li class="link-movil4 waves-effect waves-teal waves-effect waves-block waves-light"><a href="#"><i class="material-icons">laptop_mac</i>Proyectos</a></li>
-                    <li class="link-movil5 waves-effect waves-teal waves-effect waves-block waves-light"><a href="#"><i class="material-icons">card_travel</i>Experiencias</a></li>
-                    <li class="link-movil6 waves-effect waves-teal waves-effect waves-block waves-light"><a href="#"><i class="material-icons">call</i>Contacto</a></li>
-                    
-                    <li><div class="divider"></div></li>
-                <!--    <li><a class="subheader">Redes</a></li> -->                                    
-            </ul>
-        </div>
-    </nav>
-</div>
+	{% block extrastatic %}
+	{% endblock %}
 
-{% endblock %}
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+	<title>{% block title %} Junping Data {% endblock %}</title>
+</head>
+<body>
+<div class="container">
+	{% block navbar %}
+		<div class="bs-docs-section clearfix">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="bs-component">
+						<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+							<a class="navbar-brand" href={% url 'index' %}>Jumping Data</a>
+							  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+							  	</button>
+							<div class="collapse navbar-collapse" id="navbarColor01">
+							    <ul class="navbar-nav mr-auto">
+							      	<li class="nav-item dropdown show">
+									    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Campañas</a>
+									    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+									      	<a class="dropdown-item" href="{% url 'campaña_crear' %}">Registrar</a>
+									      	<a class="dropdown-item" href="{% url 'campaña_listar' %}">Listar</a>
+									    </div>
+									</li>
+									<li class="nav-item dropdown show">
+									    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Departamentos</a>
+									    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+											<a class="dropdown-item" href="{% url 'departamento_crear' %}">Registrar</a>
+											<a class="dropdown-item" href="{% url 'departamento_listar' %}">Listar</a>
+									    </div>
+									</li>
+									<li class="nav-item dropdown show">
+									    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Distritos</a>
+									    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+											<a class="dropdown-item" href="{% url 'distrito_crear' %}">Registrar</a>
+											<a class="dropdown-item" href="{% url 'distrito_listar' %}">Listar</a>
+									    </div>
+									</li>
+									<li class="nav-item dropdown show">
+									    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Sedes</a>
+									    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+											<a class="dropdown-item" href="{% url 'sede_crear' %}">Registrar</a>
+											<a class="dropdown-item" href="{% url 'sede_listar' %}">Listar</a>
+									    </div>
+									</li>
+									<li class="nav-item dropdown show">
+									    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Afiliados</a>
+									    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+											<a class="dropdown-item" href="{% url 'afiliador_crear' %}">Registrar</a>
+											<a class="dropdown-item" href="{% url 'afiliador_listar' %}">Listar</a>
+									    </div>
+									</li>
+									<li class="nav-item dropdown show">
+									    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">registros</a>
+									    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+									      	<a class="dropdown-item" href="#">Solicitar</a>
+									      	<a class="dropdown-item" href="#">Listar solicitudes</a>
+									    </div>
+									</li>
+							    </ul>
+							</div>
+						</nav>	
+					</div>	
+				</div>	
+			</div>
+		</div>
+
+	{% endblock %}
+
+	{% block content %}
+		<h5>Este es el bloque del contenido base</h5>
+	{% endblock %}
+
+	{% block footer %}
+		<h5>Este es el bloque del footer</h5>
+	{% endblock %}	
+</div>	
+	
+
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="{% static 'js/bootstrap.min.js'%}"></script>
+
+	{% block extrajs %}
+	{% endblock %}
+
+</body>
+</html>

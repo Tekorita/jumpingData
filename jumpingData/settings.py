@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'iiq+^+fr=!^0hgd)gpt-ifsw5(!)7nyamrj$dgwwjjf7j-f2j7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['jumpingdata.herokuapp.com']
 
 
@@ -81,27 +81,24 @@ WSGI_APPLICATION = 'jumpingData.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'jumpingdata',
-        'USER': 'postgres',
-        'PASSWORD': '123',
-        'HOST': 'localhost',
-        'PORT': 5432,
-    }
-}
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'deofv98bvogckm',
-#         'USER': 'uiuczpmdoqjhhf',
-#         'PASSWORD': '63ecb45f7f8a9483e67523faca34a8365379bd5d0846d9c70a7a170d97714cca',
-#         'HOST': 'ec2-54-80-184-43.compute-1.amazonaws.com',
+#         'NAME': 'jumpingdata',
+#         'USER': 'postgres',
+#         'PASSWORD': '123',
+#         'HOST': 'localhost',
 #         'PORT': 5432,
 #     }
 # }
+import dj_database_url
+from decouple import config
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
+}
 
 
 # Password validation

@@ -17,7 +17,7 @@ from apps.afiliador.models import Afiliador
 #-----------------------------------VISTAS BASADAS EN FUNCIONES-------------------------------------------
 
 def index(request):
-	return render(request, 'afiliador/index.html')
+	return render(request, 'index.html')
 
 def afiliador_view(request):
 	# import pdb; pdb.set_trace()

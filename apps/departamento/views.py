@@ -17,7 +17,7 @@ from apps.departamento.models import Departamento
 #-----------------------------------VISTAS BASADAS EN FUNCIONES-------------------------------------------
 
 def index(request):
-	return render(request, 'departamento/index.html')
+	return render(request, 'index.html')
 
 def departamento_view(request):
 	# import pdb; pdb.set_trace()

@@ -16,23 +16,25 @@
 
 	<title>{% block title %} Junping Data {% endblock %}</title>
 </head>
+<style>
+	body {
+		background-repeat: no-repeat;
+	}
+</style>
 <body>
 	<header>
 		{% block navbar %}
-			{% include 'base/navbar2.html' %}		
+			{% include 'base/navbar.html' %}		
 		{% endblock %}
 	</header>
-	<div class="container">
-		
+	<div class="container center-align">
 		{% block content %}
-			<h5>Este es el bloque del contenido base</h5>
-		{% endblock %}
-
-
+			{% include 'base/paralax1.html' %}	
+		{% endblock%}
 	</div>	
 	{% block footer %}
 		{% include 'base/footer.html' %}
-	{% endblock %}	
+	{% endblock %}
 
 
 	{% block extrajs %}

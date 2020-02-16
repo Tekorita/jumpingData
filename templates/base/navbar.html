@@ -3,23 +3,20 @@
 
 <div class="menu">
     <nav>
-        <div class="nav-wrapper z-depth-5 blue-grey darken-4 hoverable">
-            <div class="container-redes">
-                <ul class="left">      
-                    <li class="link"><a href="https://www.facebook.com/davidjesus.palma" target="_blank"><i class="icon ion-logo-facebook"></i></a></li>
-                    <li class="link"><a href="https://twitter.com/davidpalmalugo" target="_blank"><i class="icon ion-logo-twitter"></i></a></li>
-                    <li class="link"><a href="https://www.instagram.com/david_palma07/" target="_blank"><i class="icon ion-logo-instagram"></i></a></li>
-                    <li class="link"><a href="https://github.com/Tekorita" target="_blank"><i class="icon ion-logo-github"></i></a></li>
-                    <li class="link"><a href="https://www.linkedin.com/in/david-palma-lugo-b53388105/" target="_blank"><i class="icon ion-logo-linkedin"></i></a></li>
-                </ul>
+        <div class="nav-wrapper z-depth-4 blue-grey darken-4 hoverable">
+            <div class="container-jump">
+                <a href="#" class="brand-logo">
+                    <img class="responsive-img logo-jump" src="{% static 'imagenes/logoJump.png' %}">
+                </a>
             </div>
             <ul class="right hide-on-med-and-down">
-                <li class="border-nav-1 link waves-effect waves-purple waves-effect waves-block waves-light"><a href="#">Home</a></li>                
-                <li class="border-nav-2 link waves-effect waves-orange waves-effect waves-block waves-light"><a href="#">Sobre mi</a></li>                
-                <li class="border-nav-3 link waves-effect waves-yellow waves-effect waves-block waves-light"><a href="#">Skills</a></li>            
-                <li class="border-nav-4 link waves-effect waves-red waves-effect waves-block waves-light"><a href="#">Proyectos</a></li>                
-                <li class="border-nav-5 link waves-effect waves-blue waves-effect waves-block waves-light"><a href="#">Experiencia</a></li>                
-                <li class="border-nav-6 link waves-effect waves-teal waves-effect waves-block waves-light"><a href="#">Contacto</a></li>                    
+                <li class="border-nav-1 link waves-effect waves-purple waves-effect waves-block waves-light"><a href="{% url 'index' %}">Inicio</a></li>               
+                <li class="border-nav-2 link waves-effect waves-orange waves-effect waves-block waves-light"><a href="{% url 'campaña_listar' %}">Campañas</a></li>                
+                <li class="border-nav-3 link waves-effect waves-yellow waves-effect waves-block waves-light"><a href="{% url 'departamento_listar' %}">Departamentos</a></li>            
+                <li class="border-nav-4 link waves-effect waves-red waves-effect waves-block waves-light"><a href="{% url 'distrito_listar' %}">Distritos</a></li>                
+                <li class="border-nav-5 link waves-effect waves-blue waves-effect waves-block waves-light"><a href="{% url 'sede_listar' %}">Sedes</a></li>                
+                <li class="border-nav-6 link waves-effect waves-teal waves-effect waves-block waves-light"><a href="{% url 'afiliador_listar' %}">Afiliadores</a></li>
+                <li class="border-nav-6 link waves-effect waves-teal waves-effect waves-block waves-light"><a href="#">Registros</a></li>                  
             </ul>
             <a href="#" data-target="slide-out" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
             <ul id="slide-out" class="sidenav">
@@ -33,15 +30,14 @@
                           <a href="#"><span class="white-text email">davidpalmalugo@gmail.com</span></a>
                         </div>
                     </li>
-                    <li class="link-movil1 waves-effect waves-teal waves-effect waves-block waves-light"><a href="#"><i class="material-icons">home</i>Home</a></li>
-                    <li class="link-movil2 waves-effect waves-teal waves-effect waves-block waves-light"><a href="#"><i class="material-icons">face</i>Sobre mi</a></li>
-                    <li class="link-movil3 waves-effect waves-teal waves-effect waves-block waves-light"><a href="#"><i class="material-icons">code</i>Skills</a></li>
-                    <li class="link-movil4 waves-effect waves-teal waves-effect waves-block waves-light"><a href="#"><i class="material-icons">laptop_mac</i>Proyectos</a></li>
-                    <li class="link-movil5 waves-effect waves-teal waves-effect waves-block waves-light"><a href="#"><i class="material-icons">card_travel</i>Experiencias</a></li>
-                    <li class="link-movil6 waves-effect waves-teal waves-effect waves-block waves-light"><a href="#"><i class="material-icons">call</i>Contacto</a></li>
+                    <li class="link-movil1 waves-effect waves-teal waves-effect waves-block waves-light"><a href="#"><i class="material-icons">home</i>Campañas</a></li>
+                    <li class="link-movil2 waves-effect waves-teal waves-effect waves-block waves-light"><a href="{% url 'campaña_listar' %}"><i class="material-icons">face</i>Departamentos</a></li>
+                    <li class="link-movil3 waves-effect waves-teal waves-effect waves-block waves-light"><a href="{% url 'departamento_crear' %}"><i class="material-icons">code</i>Distritos</a></li>
+                    <li class="link-movil4 waves-effect waves-teal waves-effect waves-block waves-light"><a href="{% url 'distrito_listar' %}"><i class="material-icons">laptop_mac</i>Sedes</a></li>
+                    <li class="link-movil5 waves-effect waves-teal waves-effect waves-block waves-light"><a href="{% url 'sede_listar' %}"><i class="material-icons">card_travel</i>Afiliadores</a></li>
+                    <li class="link-movil6 waves-effect waves-teal waves-effect waves-block waves-light"><a href="{% url 'afiliador_listar' %}"><i class="material-icons">call</i>Registros</a></li>
                     
-                    <li><div class="divider"></div></li>
-                <!--    <li><a class="subheader">Redes</a></li> -->                                    
+                    <li><div class="divider"></div></li>                                  
             </ul>
         </div>
     </nav>

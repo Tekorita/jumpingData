@@ -1,1 +1,1 @@
-web: gunicorn jumpingData.wsgi
+web: gunicorn jumpingData.wsgi --log-file -
