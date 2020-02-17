@@ -1,6 +1,7 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
+<h3 class="title-afiliador animated zoomIn">Gestión de Afiliadores</h3>
 <form method="post">
 	{% csrf_token %}
 	{{ form.as_p }} 

@@ -1,6 +1,7 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
+<h3 class="title-distrito animated zoomIn">Gestión de Distritos</h3>
 <form method="post">
 	{% csrf_token %}
 	{{ form.as_p }} 

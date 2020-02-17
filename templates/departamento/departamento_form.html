@@ -1,6 +1,7 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
+<h3 class="title-departamento animated zoomIn">Gestión Departamentos</h3>
 <form method="post">
 	{% csrf_token %}
 	{{ form.as_p }} 

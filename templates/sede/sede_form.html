@@ -1,9 +1,17 @@
 {% extends 'base/base.html' %}
-
+{% load materializecss %}
 {% block content %}
-<form method="post">
-	{% csrf_token %}
-	{{ form.as_p }} 
-	<button class = "btn btn-primary" type="submit">Guardar</button>
-</form>
+<h3 class="title-sede animated zoomIn">Gestión de Sedes</h3>
+<div class="row">
+	<div class="col s6">
+		<form class="col s12" action="" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+
+			{{ form|materializecss }}
+			
+			<button class="btn waves-effect waves-light" type="submit" name="action">Agregar
+			</button>
+		</form>
+	</div>
+</div>
 {% endblock %}

@@ -1,0 +1,8 @@
+{% load staticfiles %}
+{% block content %}
+	<div class="parallax-window2" data-parallax="scroll" data-bleed="10" data-speed="0.1" data-image-src="{% static 'imagenes/paralax2.png' %}">
+			{% block home %}
+				{% include 'contenido/logos.html' %}
+			{% endblock%}
+	</div>
+{% endblock %}

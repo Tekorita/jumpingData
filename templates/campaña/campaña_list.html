@@ -1,5 +1,7 @@
 {% extends 'base/base.html' %}
 {% block content %}
+<h3 class="title-campaña animated zoomIn">Listado de Campañas</h3>
+<a class="btn-floating btn-large waves-effect light-blue darken-3" href="{% url 'campaña_crear' %}"><i class="material-icons">add</i></a>
 <table class="striped responsive-table">
 	<thead>
 		<tr>
@@ -14,8 +16,8 @@
 			<td>{{ campaña.id }}</td>
 			<td>{{ campaña.nombre }}</td>
 			<td>
-				<a class = "btn btn-primary" href="{% url 'campaña_editar' campaña.id %}">Editar</a>
-				<a class = "btn btn-danger" href="{% url 'campaña_eliminar' campaña.id %}">Eliminar</a>
+				<a class = "btn teal accent-4" href="{% url 'campaña_editar' campaña.id %}">Editar</a>
+				<a class = "btn red lighten-2" href="{% url 'campaña_eliminar' campaña.id %}">Eliminar</a>
 			</td>		
 		</tr>
 		{% endfor %}

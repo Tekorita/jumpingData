@@ -1,5 +1,7 @@
 {% extends 'base/base.html' %}
 {% block content %}
+<h3 class="title-afiliador animated zoomIn">Listado de Afiliadores</h3>
+<a class="btn-floating btn-large waves-effect light-blue darken-3" href="{% url 'afiliador_crear' %}"><i class="material-icons">add</i></a>
 <table class="table table-bordered">
 	<thead>
 		<tr>
@@ -18,8 +20,8 @@
 			<td>{{ afiliador.telefono }}</td>
 			<td>{{ afiliador.sede.nombre }}</td>
 			<td>
-				<a class = "btn btn-primary" href="{% url 'afiliador_editar' afiliador.id_afiliador %}">Editar</a>
-				<a class = "btn btn-danger" href="{% url 'afiliador_eliminar' afiliador.id_afiliador %}">Eliminar</a>
+				<a class = "btn teal accent-4" href="{% url 'afiliador_editar' afiliador.id_afiliador %}">Editar</a>
+				<a class = "btn red lighten-2" href="{% url 'afiliador_eliminar' afiliador.id_afiliador %}">Eliminar</a>
 			</td>		
 		</tr>
 		{% endfor %}

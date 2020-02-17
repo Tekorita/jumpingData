@@ -1,0 +1,24 @@
+{% load staticfiles %}
+{% block content %}
+	<div id="home" class="section scrollspy">		
+		<div class ="container">
+			<div class ="row">
+				<div class="col s12 m6 l6">
+					<img class="responsive-img circle z-depth-5 animated zoomIn delay-1s" src="{% static 'imagenes/yo3.jpg'%}">
+				</div>
+				<div class="col s12 m6 l6 spacing">
+					<img class="responsive-img animated bounceIn delay-2s" src="{% static 'imagenes/logo2.png'%}">
+					<a class="waves-effect waves-light btn-large pulse purple darken-4 z-depth-5 animated zoomIn delay-2s" href="#proyectos">Ver mis Proyectos</a>
+					<h4 class="white-text animated zoomIn delay-2s"><strong><spam class ="red-text">print</spam><spam class="white-text">(</spam><spam class="yellow-text">"Hello world"</spam><spam class="white-text">)</spam> Soy Programador Web
+						<a href="#" class="typewrite" data-period="2000" data-type='["y estudiante de Platzi.","en Backend y Fronted.", "y me encanta el diseño Flat.", "y autodidacta", "y amo los perros." ]'></a></strong>
+					</h4>
+				</div>
+				<div class="col s12 m12 l12 bounce-align animated bounceInDown delay-3s">
+					<div class="encircle bounce animated">
+						<div class="arrow"></div>
+					</div>
+				</div>		    			
+    		</div>	    	
+	    </div> 
+	</div>
+{% endblock %}

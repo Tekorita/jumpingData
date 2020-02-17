@@ -2,47 +2,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
+	
+	{% block extrahead %}
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.1/css/materialize.min.css" integrity="sha256-qj3p6P1fJIV+Ndv7RW1ovZI2UhOuboj9GcODzcNFIN8=" crossorigin="anonymous" />
 
-	{% block extrastatic %}
-	{% endblock %}
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+		<link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="{% static 'css/animate.min.css' %}"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="{% static 'css/estilos.css' %}"  media="screen,projection"/>
+		<link rel="shortcut icon" type="image/png" href="{% static 'imagenes/favicon.png' %}"/> 
 
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-	<link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}"  media="screen,projection"/>
-	<link type="text/css" rel="stylesheet" href="{% static 'css/animate.min.css' %}"  media="screen,projection"/>
-	<link type="text/css" rel="stylesheet" href="{% static 'css/estilos.css' %}"  media="screen,projection"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+	{% endblock %}	
 
-	<title>{% block title %} Junping Data {% endblock %}</title>
+	<title>{% block title %} David Palma {% endblock %}</title>
 </head>
-<style>
-	body {
-		background-repeat: no-repeat;
-	}
-</style>
 <body>
+
 	<header>
 		{% block navbar %}
-			{% include 'base/navbar.html' %}		
-		{% endblock %}
+			{% include 'base/navbar2.html' %}		
+		{% endblock %}	
 	</header>
-	<div class="container center-align">
-		{% block content %}
-			{% include 'base/paralax1.html' %}	
-		{% endblock%}
-	</div>	
-	{% block footer %}
-		{% include 'base/footer.html' %}
-	{% endblock %}
+	<main>	
+		<div class="section grey lighten-3">
+			<div class="container">
+				<div class="row">
+				    <div class="col s12 m12 l12">
+						{% block content %}
+							<img class="responsive-img center wow swing" data-wow-duration="1.4s" data-wow-delay="1.3s" src="{% static 'imagenes/JumpFondo2.png' %}">	
+						{% endblock%}       
+				    </div>  
+				</div>
+			</div>
+		</div>
+	</main>	
+		{% block footer %}
+			{% include 'base/footer.html' %}
+		{% endblock %}	
+	
+	{% block javascript %}
+		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="{% static 'js/materialize.min.js'%}"></script>
+		<script src="{% static 'js/main.js'%}"></script>
+		<script src="{% static 'js/wow.min.js'%}"></script>
+		
+		<script src="{% static 'js/parallax.js'%}"></script>
 
+		<script>new WOW().init();</script>
+		<script src= "https://unpkg.com/ionicons@4.5.5/dist/ionicons.js" ></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.1/js/materialize.min.js" integrity="sha256-SrBfGi+Zp2LhAvy9M1bWOCXztRU9Ztztxmu5BcYPcPE=" crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(function(){
 
-	{% block extrajs %}
-	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="{% static 'js/materialize.min.js'%}"></script>
-	<script src="{% static 'js/main.js'%}"></script>
-	<script src="{% static 'js/wow.min.js'%}"></script>
-	<script src="{% static 'js/parallax.js'%}"></script>
+			// Initialize materialize data picker
+			$('.datepicker').datepicker({'format': 'yyyy-mm-dd'});
+			$('select').formSelect();
+
+			});
+		</script>
 	{% endblock %}
 
 </body>

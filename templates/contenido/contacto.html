@@ -1,0 +1,125 @@
+{% load staticfiles %}
+{% block content %}
+<div id="contacto" class="section scrollspy">
+	<div class="container-fluid white-text">
+		<div class="row">
+			<div class="col s12 m12 l12">		    		
+	    		<div class="col s12 m12 l12 center">
+					<img class="responsive-img" src="{% static 'imagenes/contacto.png'%}">
+				</div>
+				<div class="col s12 m12 l12">
+					<h4 class="center"><strong>Cuéntame!</strong></h4><br>	
+				</div>		    		
+		        <div class="col s12 m6 l6">
+				      
+				        <p>
+			        	Quizás has visto algo y te ha gustado, o quizás tienes alguna propuesta, 
+			        	idea o necesidad en internet. No dudes en contactar conmigo para resolver 
+			        	cualquier tipo de duda o pregunta. Si necesitas hablar de un proyecto que tienes
+			        	en mente o sencillamente deseas decirme 'Hola que tal' puedes ponerte en 
+			        	contacto conmigo.
+			        	</p>
+					    <p>
+						Envíame un correo a davidpalmalugo@gmail.com o rellena el formulario para cualquier sugerencia o duda.
+				        </p>
+				        <ul>
+				        	<li><i class="icon ion-logo-whatsapp"></i><strong>  +(58) 4242364606</strong></li>
+				        	<li><i class="material-icons tiny">call</i><strong>  +(56) 981303177</strong></li>
+				        	<li><i class="material-icons tiny">mail</i><strong>  davidpalmalugo@gmail.com</strong></li>
+				        </ul>	
+				</div>
+				<div class="col s12 m6 l6 wow swing" data-wow-duration="1.4s" data-wow-delay="0.3s">
+				    <ul class="collapsible popout z-depth-5">
+					    <li>
+					      	<div class="collapsible-header green-text"><i class="material-icons">mail</i>Contactame<i class="material-icons right">keyboard_arrow_down</i></div>
+					      	<div class="collapsible-body">					      		
+					      			<form>
+								      	<div class="row">
+								        	<div class="input-field col s6">
+								          		<input id="first_name" type="text" class="validate white-text">
+								          		<label for="first_name" class="white-text">Nombre</label>
+								        	</div>
+								        	<div class="input-field col s6">
+								          		<input id="email" type="email" class="validate white-text">
+								          		<label for="email" class="white-text">Email</label>
+								        	</div>
+								      	</div>
+								      	<div class="row">
+								        	<div class="input-field col s12">
+								          		<input id="asunto" type="text" class="validate white-text">
+								          		<label for="asunto" class="white-text">Asunto</label>
+								        	</div>
+								      	</div>  
+								      	<div class="row">
+								        	<div class="input-field col s12">
+								            	<textarea id="textarea2" class="materialize-textarea white-text" data-length="120"></textarea>
+								            	<label for="textarea2" class="white-text">Mensaje</label>
+								        	</div>
+								      	</div>
+								      	<div class="row center">
+									      	<button class="btn waves-effect waves-light center" type="submit" name="action">Enviar
+	    										<i class="material-icons right">send</i>
+	  										</button>
+	  									</div>      
+								    </form>
+
+
+					      	</div>
+					    </li>
+					    <li>
+					    <div class="collapsible-header green-text"><i class="material-icons">pan_tool</i>Sugerencias <i class="material-icons right">keyboard_arrow_down</i></div>
+					      	<div class="collapsible-body">	
+								<p>
+									Siempre es importante conocer el punto de vista de los demás y someterse a criticas para mejorar y evolucionar. Es por eso que diseñe esta mini encuesta para recibir sugerencias y en base a los resultados ver en que puedo mejorar.
+								</p>
+								<form action="#">
+									<div class="row">
+										<label class="white-text">1) ¿Qué te parece el diseño de mi sitio web?</label>
+										<div class="input-field col s12">								        		
+											<label class="white-text">
+												<input name="group1" type="radio" checked />
+												<span>Excelente</span>
+											</label>
+										</div>
+										<div class="input-field col s12">
+											<label class="white-text">
+											<input name="group1" type="radio" />
+											<span>Regular</span>
+											</label>
+										</div>
+										<div class="input-field col s12">
+											<label class="white-text">
+											<input name="group1" type="radio" />
+											<span>Horrible</span>
+											</label>
+										</div>
+									</div>
+									<div class="row">
+										<div class="input-field col s12">
+											<label for="test" class="white-text">2) ¿En escala del 1 al 10 que puntuación le darías?</label><br><br>
+											<input type="range" id="test" min="0" max="10" />
+										</div>
+									</div>  
+									<div class="row">
+										<div class="input-field col s12">
+											<textarea id="textarea2" class="materialize-textarea white-text" data-length="120"></textarea>
+											<label for="textarea2" class="white-text">Sugerencías</label>
+										</div>
+									</div>
+									<div class="row center">
+										<button class="btn waves-effect waves-light center" type="submit" name="action">Enviar
+											<i class="material-icons right">send</i>
+										</button>
+									</div>
+								</form>		
+					      	</div>
+					    </li>
+					</ul>
+				</div>
+	    	</div>    
+		</div>
+	</div>  
+</div>
+		
+
+{% endblock %}

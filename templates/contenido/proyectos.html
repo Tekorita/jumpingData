@@ -1,0 +1,211 @@
+{% load staticfiles %}
+{% block content %}
+<div id="proyectos" class="section scrollspy">
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col s12 m12 l12 center wow fadeInUp" data-wow-duration="1.4s">
+				<img class="responsive-img" src="{% static 'imagenes/proyectos.png'%}">
+			</div>
+			<div class="col s12 m6 l6 wow slideInLeft" data-wow-duration="1.4s" data-wow-delay="0.1s">
+			    <div class="card">
+			    		<div class="card-image waves-effect waves-block waves-light">
+			      			<img class="activator" src="{% static 'imagenes/porta1.jpg'%}">
+			    		</div>
+			    	<div class="card-content">
+			      		<span class="card-title activator grey-text text-darken-4">Contexto Social<i class="material-icons right">keyboard_capslock</i></span>
+			      		<p><a target="_blank" href="https://contextosocial.github.io/">https://contextosocial.github.io/</a></p>
+			    	</div>
+			    	<div class="card-reveal">
+			      		<span class="card-title grey-text text-darken-4"><h5 class="blue-text center">Contexto Social</h5><i class="material-icons right">close</i></span>
+			      		<p>Contexto Social es un sitio web informativo perteneciente a <a target="_blank" href="https://twitter.com/danii_moros?ref_src=twsrc%5Etfw">@Danii_moros</a> donde comparte notas de prensa y noticias sobre opinión pública el cual se pueden compartir en las redes sociales.</p>
+			      		<h5 class="blue-text">Recursos</h5>
+			      			<ul>
+			      				<li><strong>- Materializecss</strong></li>
+			      				<li><strong>- Flexbox</strong></li>
+			      				<li><strong>- Html5</strong></li>
+			      				<li><strong>- Css3</strong></li>
+			      				<li><strong>- Javascript</strong></li>
+			      				<li><strong>- Saas</strong></li>
+			      				<li><strong>- Git</strong></li>
+			      			</ul>
+			      		<h5 class="blue-text">Repositorio en GitHub</h5>
+			      			<ul>
+			      				<li><a target="_blank" href="https://github.com/Tekorita/ContextoSocial">https://github.com/Tekorita/ContextoSocial</a></li>
+			      			</ul>
+			    	</div>
+			  	</div>
+			</div>
+			<div class="col s12 m6 l6 wow slideInRight" data-wow-duration="1.4s" data-wow-delay="0.2s">
+			    <div class="card">
+			    		<div class="card-image waves-effect waves-block waves-light">
+			      			<img class="activator" src="{% static 'imagenes/porta8.png'%}">
+			    		</div>
+			    	<div class="card-content">
+			      		<span class="card-title activator grey-text text-darken-4">Proyecto Pokemon<i class="material-icons right">keyboard_capslock</i></span>
+			      		<p><a target="_blank" href="https://github.com/Tekorita/proyectoPokemon.git">github.com/Tekorita/proyectoPokemon.git</a></p>
+			    	</div>
+			    	<div class="card-reveal">
+			      		<span class="card-title grey-text text-darken-4"><h5 class="blue-text center">Proyecto Pokemon</h5><i class="material-icons right">close</i></span>
+						  <p>Proyecto Pokemon es una app que gestionar la información de los entrenadores y pokemones, para luego poder asignar un pokemon a cada entrenador. Este proyecto se realizo en <strong>php</strong> con <strong>Laravel</strong> y administrando una base de datos en <strong>Mysql</strong>, donde se desarrollo los modelos con sus migraciones, controladores, vistas, sistema de plantillas de blade, el <strong>ORM</strong> de <strong>Laravel Eloquent</strong>, manejo del consumo de datos con la <strong>Api Rest</strong> request y response, autenticación e incorporación de la librería de <strong>Javascript</strong> <strong>Vue Js</strong> donde se crearon los componentes de cada pokemon.</p>
+			      		<h5 class="blue-text">Recursos</h5>
+			      			<ul>
+			      				<li><strong>- Html5</strong></li>
+			      				<li><strong>- Css3</strong></li>
+			      				<li><strong>- Javascript</strong></li>
+			      				<li><strong>- Bootstrap</strong></li>
+								<li><strong>- Vue Js</strong></li>
+								<li><strong>- PHP</strong></li>
+								<li><strong>- Laravel</strong></li>
+								<li><strong>- MySql</strong></li>  
+			      				<li><strong>- Git</strong></li>
+			      			</ul>
+			      		<p>Esta aplicación la desarrolle en base a todos los conocimientos obtenidos con el curso avanzado de Laravel en su version 5.8</p>
+			    	</div>
+			  	</div>
+			</div>
+			<div class="col s12 m6 l6 wow bounceInUp" data-wow-duration="1.4s" data-wow-delay="0.2s">
+			    <div class="card">
+			    		<div class="card-image waves-effect waves-block waves-light">
+			      			<img class="activator" src="{% static 'imagenes/vues.png'%}">
+			    		</div>
+			    	<div class="card-content">
+			      		<span class="card-title activator grey-text text-darken-4">App TareasGYm (Vue JS)<i class="material-icons right">keyboard_capslock</i></span>
+			      		<p><a target="_blank" href="https://github.com/Tekorita/GimVueJs.git">https://github.com/Tekorita/GimVueJs.git</a></p>
+			    	</div>
+			    	<div class="card-reveal">
+			      		<span class="card-title grey-text text-darken-4"><h5 class="blue-text center">App TareasGYm con Vue JS</h5><i class="material-icons right">close</i></span>
+			      		<p>La App de tareas para gym consiste en agregar una lista de rutinas de entrenamiento las cuales se les puede cambiar su estatus a medida de que complete cada ejercicio pudiendose también eliminarse cada una por separado. Esta App fue desarrollada con <strong>Vue Js</strong> aplicando los principios del uso de componentes con funciones y métodos basados en un CRUD básico</p>
+			      		<h5 class="blue-text">Recursos</h5>
+			      			<ul>
+			      				<li><strong>- Html5</strong></li>
+			      				<li><strong>- Css3</strong></li>
+			      				<li><strong>- Javascript</strong></li>
+			      				<li><strong>- Bootstrap</strong></li>
+			      				<li><strong>- Vue Js</strong></li>
+			      				<li><strong>- Git</strong></li>
+			      			</ul>
+			      		<p>Esta aplicación la desarrolle en base a todos los conocimientos obtenidos con el curso basico de Vue Js</p>
+			    	</div>
+			  	</div>
+			</div>
+        	<div class="col s12 m6 l6 wow bounceInUp" data-wow-duration="1.4s">
+			    <div class="card">
+			    		<div class="card-image waves-effect waves-block waves-light">
+			      			<img class="activator" src="{% static 'imagenes/portafolio6.jpg'%}">
+			    		</div>
+			    	<div class="card-content">
+			      		<span class="card-title activator grey-text text-darken-4">Gestor de Tareas (React js)<i class="material-icons right">keyboard_capslock</i></span>
+			      		<p><a target="_blank" href="https://github.com/Tekorita/refugio">https://github.com/Tekorita/tareas</a></p>
+			    	</div>
+			    	<div class="card-reveal">
+			      		<span class="card-title grey-text text-darken-4"><h5 class="blue-text center">Gestor de Tareas en React js</h5><i class="material-icons right">close</i></span>
+			      		<p>Gestor de tareas tiene como funcionalidad agregar tareas identificando el titulo, el responsable, la tarea a realizar y la prioridad que tiene. Esta app se realizo con la librería de <strong>React Js</strong> donde se crearon componentes individuales teniendo como funcionalidad principal la app actualizar los datos de cada componente por medio de un json sin necesidad de renderizar toda la pagina gracias al poder de <strong>React Js</strong></p>
+			      		<h5 class="blue-text">Recursos</h5>
+			      			<ul>
+			      				<li><strong>- Html5</strong></li>
+			      				<li><strong>- Css3</strong></li>
+			      				<li><strong>- Javascript</strong></li>
+			      				<li><strong>- Bootstrap</strong></li>
+			      				<li><strong>- React Js</strong></li>
+			      				<li><strong>- Git</strong></li>
+			      			</ul>
+			      		<p>Esta aplicación la desarrolle en base a todos los conocimientos obtenidos con el curso basico de React Js</p>
+			    	</div>
+			  	</div>
+			</div>
+			<div class="col s12 m6 l6 wow bounceInUp" data-wow-duration="1.4s" data-wow-delay="0.2s">
+			    <div class="card">
+			    		<div class="card-image waves-effect waves-block waves-light">
+			      			<img class="activator" src="{% static 'imagenes/portafolio3.png'%}">
+			    		</div>
+			    	<div class="card-content">
+			      		<span class="card-title activator grey-text text-darken-4">Control para refugio<i class="material-icons right">keyboard_capslock</i></span>
+			      		<p><a target="_blank" href="https://github.com/Tekorita/refugio">https://github.com/Tekorita/refugio</a></p>
+			    	</div>
+			    	<div class="card-reveal">
+			      		<span class="card-title grey-text text-darken-4"><h5 class="blue-text center">Refugio de Animales</h5><i class="material-icons right">close</i></span>
+			      		<p>Refugio de Animales es una app para gestionar el control de animales abandonados por donde se pueden solicitar adopciones y llevar un control general, en términos generales es una app basica <strong>(CRUD)</strong> donde se maneja la información en una base de datos.</p>
+			      		<h5 class="blue-text">Recursos</h5>
+			      			<ul>
+			      				<li><strong>- Django</strong></li>
+			      				<li><strong>- Python</strong></li>
+			      				<li><strong>- Html5</strong></li>
+			      				<li><strong>- Css3</strong></li>
+			      				<li><strong>- Javascript</strong></li>
+			      				<li><strong>- Bootstrap</strong></li>
+			      				<li><strong>- PostgresSql</strong></li>
+			      				<li><strong>- Git</strong></li>
+			      			</ul>
+			      		<p>Esta aplicación la desarrolle en base a todos los conocimientos obtenidos con el curso de Django y Python</p>
+			    	</div>
+			  	</div>
+			</div>
+			<div class="col s12 m6 l6 wow bounceInUp" data-wow-duration="1.4s">
+			    <div class="card">
+			    		<div class="card-image waves-effect waves-block waves-light">
+			      			<img class="activator" src="{% static 'imagenes/porta2.jpg'%}">
+			    		</div>
+			    	<div class="card-content">
+			      		<span class="card-title activator grey-text text-darken-4">Fusion urbana 4 esquinas<i class="material-icons right">keyboard_capslock</i></span>
+			      		<p><a target="_blank" href="https://fusionurbana4esquina.wixsite.com/fuce">https://fusionurbana4esquina.wixsite</a></p>
+			    	</div>
+			    	<div class="card-reveal">
+			      		<span class="card-title grey-text text-darken-4"><h5 class="blue-text center">Fusion Urbana 4 Esquinas</h5><i class="material-icons right">close</i></span>
+			      		<p>Fusión urbana 4 esquinas fue un proyecto perteneciente a <a target="_blank" href="https://twitter.com/danii_moros?ref_src=twsrc%5Etfw">@Danii_moros</a> para una labor social de la universidad, realizado con la finalidad de promover toda información relevante sobre irregularidades y novedades del consejo comunal.</p>
+			      		<h5 class="blue-text">Recursos</h5>
+			      			<ul>
+			      				<li><strong>- CMS de wix</strong></li>
+			      			</ul>
+			      		<p>Es importante destacar que el sitio web no es responsivo debido a que los templates disponibles en el CMS de wix no eran responsivos para la epoca.</p>
+			    	</div>
+			  	</div>
+			</div>
+			<div class="col s12 m6 l6 wow bounceInUp" data-wow-duration="1.4s" data-wow-delay="0.2s">
+			    <div class="card">
+			    		<div class="card-image waves-effect waves-block waves-light">
+			      			<img class="activator" src="{% static 'imagenes/portafolio4.png'%}">
+			    		</div>
+			    	<div class="card-content">
+			      		<span class="card-title activator grey-text text-darken-4">Gestor de Tareas en Js(Demo)<i class="material-icons right">keyboard_capslock</i></span>
+			      		<p><a target="_blank" href="https://github.com/Tekorita/AplicacionJs">https://github.com/Tekorita/AplicacionJs</a></p>
+			    	</div>
+			    	<div class="card-reveal">
+			      		<span class="card-title grey-text text-darken-4"><h5 class="blue-text center">Gestor de Tareas en Js (Demo)</h5><i class="material-icons right">close</i></span>
+			      		<p>El gestor de tareas en javascript es un demo que simplemente agrega y elimina registros listandolos en pila por medio de funciones en javascript donde se pone en práctica el manejo de los <strong>DOM(Document Object Model)</strong> para poder agregar y eliminar listas de html almacenandolas en memoría sin usar una base de datos.</p>
+			      		<h5 class="blue-text">Recursos</h5>
+			      			<ul>
+			      				<li><strong>- Html5</strong></li>
+			      				<li><strong>- Css3</strong></li>
+			      				<li><strong>- Javascript</strong></li>
+			      				<li><strong>- Git</strong></li>
+			      			</ul>
+			    	</div>
+			  	</div>
+			</div>
+			<div class="col s12 m6 l6 wow bounceInUp" data-wow-duration="1.4s">
+			    <div class="card">
+			    		<div class="card-image waves-effect waves-block waves-light">
+			      			<img class="activator" src="{% static 'imagenes/portafolio5.png'%}">
+			    		</div>
+			    	<div class="card-content">
+			      		<span class="card-title activator grey-text text-darken-4">Pagina con Flexbox(Demo)<i class="material-icons right">keyboard_capslock</i></span>
+			      		<p><a target="_blank" href="https://github.com/Tekorita/PaginaconFlexbox">github.com/Tekorita/PaginaconFlexbox</a></p>
+			    	</div>
+			    	<div class="card-reveal">
+			      		<span class="card-title grey-text text-darken-4"><h5 class="blue-text center">Pagina Demo con Flexbox</h5><i class="material-icons right">close</i></span>
+			      		<p>En este proyecto se puso en práctica los principios del diseño responsivo donde con las virtudes de Flexbox, los media query en css y javascript podemos configurar el orden y estructura de cada contenedor en base a la resolucion o pixeles que contenga el navegador.</p>
+			      		<h5 class="blue-text">Recursos</h5>
+			      			<ul>
+			      				<li><strong>- Html5</strong></li>
+			      				<li><strong>- Css3</strong></li>
+			      				<li><strong>- Flexbox</strong></li>
+			      				<li><strong>- Javascript</strong></li>
+			      				<li><strong>- Git</strong></li>
+			      			</ul>
+			    	</div>
+			  	</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,96 +1,42 @@
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
+{% block navbar %}
 
-	{% block extrastatic %}
-	{% endblock %}
+<div class="menu">
+    <nav>
+        <div class="nav-wrapper z-depth-3 blue-grey darken-4 hoverable">
+			<div class="container-jump">
+                <a href="#" class="brand-logo">
+                    <img class="responsive-img logo-jump" src="{% static 'imagenes/logoJumping3Edit.png' %}">
+                </a>
+            </div>
+            <ul class="right hide-on-med-and-down">
+                <li class="border-nav-1 link waves-effect waves-purple waves-effect waves-block waves-light"><a href="{% url 'index' %}">Inicio</a></li>                
+                <li class="border-nav-2 link waves-effect waves-orange waves-effect waves-block waves-light"><a href="{% url 'campaña_listar' %}">Campañas</a></li>                
+                <li class="border-nav-3 link waves-effect waves-yellow waves-effect waves-block waves-light"><a href="{% url 'departamento_listar' %}">Departamentos</a></li>            
+                <li class="border-nav-4 link waves-effect waves-red waves-effect waves-block waves-light"><a href="{% url 'distrito_listar' %}">Distritos</a></li>                
+                <li class="border-nav-5 link waves-effect waves-blue waves-effect waves-block waves-light"><a href="{% url 'sede_listar' %}">Sedes</a></li>                
+                <li class="border-nav-6 link waves-effect waves-teal waves-effect waves-block waves-light"><a href="{% url 'afiliador_listar' %}">Afiliadores</a></li>                    
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+            <ul id="slide-out" class="sidenav">
+                    <li class="">
+                        <div class="user-view container-logo-nav-movil">
+                          <div class="blue-grey darken-4 background sub-container-logo-nav-movil">
+                            <img class = "logo-jump-nav-movil" src="{% static 'imagenes/logoJumping3Edit.png' %}">
+                          </div>
+                        </div>
+                    </li>
+                    <li class="link-movil1 waves-effect waves-teal waves-effect waves-block waves-light"><a href="{% url 'index' %}"><i class="material-icons">home</i>Inicio</a></li>
+                    <li class="link-movil2 waves-effect waves-teal waves-effect waves-block waves-light"><a href="{% url 'campaña_listar' %}"><i class="material-icons">face</i>Campañas</a></li>
+                    <li class="link-movil3 waves-effect waves-teal waves-effect waves-block waves-light"><a href="{% url 'departamento_crear' %}"><i class="material-icons">code</i>Departamentos</a></li>
+                    <li class="link-movil4 waves-effect waves-teal waves-effect waves-block waves-light"><a href="{% url 'distrito_listar' %}"><i class="material-icons">laptop_mac</i>Distritos</a></li>
+                    <li class="link-movil5 waves-effect waves-teal waves-effect waves-block waves-light"><a href="{% url 'sede_listar' %}"><i class="material-icons">card_travel</i>Sedes</a></li>
+                    <li class="link-movil6 waves-effect waves-teal waves-effect waves-block waves-light"><a href="{% url 'afiliador_listar' %}"><i class="material-icons">call</i>Afiliadores</a></li>
+                    
+                    <li><div class="divider"></div></li>                                   
+            </ul>
+        </div>
+    </nav>
+</div>
 
-	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-
-	<title>{% block title %} Junping Data {% endblock %}</title>
-</head>
-<body>
-<div class="container">
-	{% block navbar %}
-		<div class="bs-docs-section clearfix">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="bs-component">
-						<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-							<a class="navbar-brand" href={% url 'index' %}>Jumping Data</a>
-							  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
-							  	</button>
-							<div class="collapse navbar-collapse" id="navbarColor01">
-							    <ul class="navbar-nav mr-auto">
-							      	<li class="nav-item dropdown show">
-									    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Campañas</a>
-									    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-									      	<a class="dropdown-item" href="{% url 'campaña_crear' %}">Registrar</a>
-									      	<a class="dropdown-item" href="{% url 'campaña_listar' %}">Listar</a>
-									    </div>
-									</li>
-									<li class="nav-item dropdown show">
-									    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Departamentos</a>
-									    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-											<a class="dropdown-item" href="{% url 'departamento_crear' %}">Registrar</a>
-											<a class="dropdown-item" href="{% url 'departamento_listar' %}">Listar</a>
-									    </div>
-									</li>
-									<li class="nav-item dropdown show">
-									    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Distritos</a>
-									    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-											<a class="dropdown-item" href="{% url 'distrito_crear' %}">Registrar</a>
-											<a class="dropdown-item" href="{% url 'distrito_listar' %}">Listar</a>
-									    </div>
-									</li>
-									<li class="nav-item dropdown show">
-									    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Sedes</a>
-									    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-											<a class="dropdown-item" href="{% url 'sede_crear' %}">Registrar</a>
-											<a class="dropdown-item" href="{% url 'sede_listar' %}">Listar</a>
-									    </div>
-									</li>
-									<li class="nav-item dropdown show">
-									    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Afiliados</a>
-									    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-											<a class="dropdown-item" href="{% url 'afiliador_crear' %}">Registrar</a>
-											<a class="dropdown-item" href="{% url 'afiliador_listar' %}">Listar</a>
-									    </div>
-									</li>
-									<li class="nav-item dropdown show">
-									    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">registros</a>
-									    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-									      	<a class="dropdown-item" href="#">Solicitar</a>
-									      	<a class="dropdown-item" href="#">Listar solicitudes</a>
-									    </div>
-									</li>
-							    </ul>
-							</div>
-						</nav>	
-					</div>	
-				</div>	
-			</div>
-		</div>
-
-	{% endblock %}
-
-	{% block content %}
-		<h5>Este es el bloque del contenido base</h5>
-	{% endblock %}
-
-	{% block footer %}
-		<h5>Este es el bloque del footer</h5>
-	{% endblock %}	
-</div>	
-	
-
-	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="{% static 'js/bootstrap.min.js'%}"></script>
-
-	{% block extrajs %}
-	{% endblock %}
-
-</body>
-</html>
+{% endblock %}

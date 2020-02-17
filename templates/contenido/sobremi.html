@@ -1,0 +1,60 @@
+{% load staticfiles %}
+{% block content %}
+<div id="sobremi" class="section scrollspy">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col s12 m12 l12 center wow slideInRight" data-wow-duration="1.4s">
+				<img class="responsive-img" src="{% static 'imagenes/sobremi1.png'%}">
+			</div>
+			<div class="col s12 m12 l12 white-text wow slideInLeft" data-wow-duration="1.4s" data-wow-delay="0.2s">
+		        <ul id="tabs-swipe-demo" class="tabs red lighten-1">
+				    <li class="tab col s3"><a href="#test-swipe-1" class="active white-text waves-effect waves-block waves-light">Quién Soy</a></li>
+				    <li class="tab col s3"><a href="#test-swipe-2" class="white-text waves-effect waves-block waves-light">En que ando</a></li>
+				    <li class="tab col s3"><a href="#test-swipe-3" class="white-text waves-effect waves-block waves-light">Formación</a></li>
+				</ul>
+				<div id="test-swipe-1" class="col s12 red lighten-1">
+				  	<p>
+			        	Hola me llamo David Palma vivo en Santiago de Chile y soy programador web, enfocado en el desarrollo backend y fronted. Me gusta implementar nuevos estándares para el diseño y maquetación de un proyecto y siempre busco la manera de aplicar nuevas tecnologías herramientas o frameworks que faciliten el desarrollo de código, además me encanta el diseño flat o minimalista donde la simplicidad le da un mejor aspecto a las aplicaciones o sitios web siendo la nueva tendencia en la actualidad.
+			        </p>
+			        <p>
+			        	Después de finalizar mis estudios de ingeniería en informática en Venezuela me desenvolví en el campo laboral como emprendedor y cree mi propia empresa (Xirox Systems C.A) junto con <a target="_blank" href="https://www.linkedin.com/in/xleninx/">Lenin Luque</a> donde desarrollábamos sistemas administrativos para clínicas y ofrecíamos servicios de soporte técnico además de venta de equipos de informática. Después de 6 años debido a la lamentable situación que atraviesa Venezuela tuve que decidir emigrar.
+					</p>
+					<p>
+						Me considero una persona con gran atención al detalle, motivado y autocrítico. En constante formación, trabajador de equipo y con ganas de seguir disfrutando de lo que hago. Actualmente sigo creciendo profesionalmente aprendiendo nuevas tecnologías de desarrollo web.
+			        </p>
+				</div>
+				<div id="test-swipe-2" class="col s12 red lighten-1">
+					<p>
+						Actualmente me desempeño programando en python con el framework de django, he aprendido con proyectos personales que he realizado como modalidad de aprendizaje y cursos que han sido de gran utilidad. Es por ello que apunto a buscar oportunidades como desarrollador en python para poder aprender mucho mas y evolucionar. Manejo otros lenguajes como php, javascript, visual basic entre otros donde tengo años de experiencia desarrollando sistemas administrativos para clinicas, sin embargo me adapto rápido al uso de otras herramientas o lenguajes de programación cuando se requiere.
+					</p>
+					<p>
+						También me enfoco mucho en el diseño fronted ya que soy muy creativo y detallista, disfruto creando sites responsive para potenciar imágenes de marca e intentando hacer de la web un lugar más amigable para todos sus usuarios. Para ello me valgo de maravillas como Bootstrap, MaterializeCss, FlexboxGrid, preprocesadores CSS como Sass.
+					</p>
+					<p>
+						A diario busco nuevos conocimientos, recursos e inspiración en sites como Codrops, Awwwards, Alistapart, Heydesigner, Unheap, Smashing Magazine y otros tantos sites de visita obligada para profesionales de este sector tan dinámico. Pero aún me queda mucho que seguir aprendiendo, soy muy seguidor de Platzi y tengo planificado hacer varios cursos como la carrera de Full Stack en Javascript(React native, node js, angular 4 etc), Go, Kotlin, Electron, Devops, AWS, Azure y Testing.  
+					</p>
+				</div>
+				<div id="test-swipe-3" class="col s12 red lighten-1">
+					<div class="col s12 m6 l6">
+						<h4>Técnico Superior en Informática</h4>
+						<p><h6>
+							Instituto Universitario de Tecnología Dr Federico Rivero Palacio (IUTE), Caracas Venezuela (2008-2011)
+							</h6>
+						</p>
+						<h4>Ingeniería en Informática</h4>
+						<p><h6>
+							Instituto Universitario de Tecnología Dr Federico Rivero Palacio (IUTE), Caracas Venezuela (2011-2014)</h6>
+						</p>
+					</div>
+					<div class="contenedor-formacion">
+						<div class="col s12 m6 l6">
+							<img class="responsive-img circle" src="{% static 'imagenes/graduacion.jpg'%}">
+						</div>
+					</div>
+
+				</div>
+	    	</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,5 +1,6 @@
 {% extends 'base/base.html' %}
 {% block content %}
+<h3 class="title-afiliador animated zoomIn">Eliminar Afiliador</h3>
 <form method="post">
 	{% csrf_token %}
 	<h3>Deseas eliminar el registro del afiliador {{ object.nombre }}?</h3>

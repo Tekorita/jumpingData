@@ -1,5 +1,6 @@
 {% extends 'base/base.html' %}
 {% block content %}
+<h3 class="title-campaña animated zoomIn">Eliminar Campaña</h3>
 <form method="post">
 	{% csrf_token %}
 	<h3>Deseas eliminar el registro de la campaña {{ object.nombre }}?</h3>

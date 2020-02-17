@@ -2993,7 +2993,7 @@ table.striped tr {
 }
 
 table.striped > tbody > tr:nth-child(odd) {
-  background-color: rgba(242, 242, 242, 0.5);
+  background-color: rgba(200, 200, 200, 0.5);
 }
 
 table.striped > tbody > tr > td {
@@ -3006,7 +3006,7 @@ table.highlight > tbody > tr {
 }
 
 table.highlight > tbody > tr:hover {
-  background-color: rgba(242, 242, 242, 0.5);
+  background-color: rgba(200, 200, 200, 0.5);
 }
 
 table.centered thead tr th, table.centered tbody tr td {

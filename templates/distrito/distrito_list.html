@@ -1,5 +1,7 @@
 {% extends 'base/base.html' %}
 {% block content %}
+<h3 class="title-distrito animated zoomIn">Listado de Distritos</h3>
+<a class="btn-floating btn-large waves-effect light-blue darken-3" href="{% url 'distrito_crear' %}"><i class="material-icons">add</i></a>
 <table class="striped responsive-table">
 	<thead>
 		<tr>
@@ -16,8 +18,8 @@
 			<td>{{ distrito.nombre }}</td>
 			<td>{{ distrito.departamento.nombre }}</td>
 			<td>
-				<a class = "btn btn-primary" href="{% url 'distrito_editar' distrito.id %}">Editar</a>
-				<a class = "btn btn-danger" href="{% url 'distrito_eliminar' distrito.id %}">Eliminar</a>
+				<a class = "btn teal accent-4" href="{% url 'distrito_editar' distrito.id %}">Editar</a>
+				<a class = "btn red lighten-2" href="{% url 'distrito_eliminar' distrito.id %}">Eliminar</a>
 			</td>		
 		</tr>
 		{% endfor %}

@@ -1,0 +1,15 @@
+{% load staticfiles %}
+{% block content %}
+
+	<div class="parallax-window1 hide-on-small-only" data-parallax="scroll" data-bleed="10" data-speed="0.3" data-image-src="{% static 'imagenes/paralax1.png' %}">
+			{% block home %}
+				{% include 'contenido/home.html' %}
+			{% endblock%}			
+	</div>
+	<div class="parallax-window1 show-on-small hide-on-med-only hide-on-large-only responsive-img" data-parallax="scroll" data-bleed="10" data-speed="0.3" data-image-src="{% static 'imagenes/paralaxx1.png' %}">
+		{% block home2 %}
+			{% include 'contenido/home.html' %}
+		{% endblock%}
+	</div>
+	
+{% endblock %}
